@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>vnjson</title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="../assets/favicon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script src="./js/highlight.pack.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+
+<header>
+	<a href="/" class="logo-wrapper">
+		<img class="logo" alt="Vnjson" src="../assets/logo.png">
+		<span class="big-title">Vnjson</span>
+	</a>
+	<nav class="top-bar__nav">
+			<a href="/docs">Документация</a> | 
+			<a href="/tools">Инструменты</a> |
+			<a href="/motivation">Мотивация</a> | 
+			<a href="/about">О проекте</a> 
+			<!--<a href="/news">Новости</a>-->
+	</nav>
+</header>
+
+
+<div class="wrapper">
+<h2>Описание</h2>
+	<blockquote>
+			Сценарный язык программирования, максимально простой для конечного пользователя и легко разсширяемый
+			 за счет плагинов
+	</blockquote>
+
+<section class="features">
+<h2>Область приминения</h2>	
+	<ul>
+		<li>
+			<div><i class="fa fa-address-card-o" aria-hidden="true"></i></div>
+			<p>Визуальные новеллы</p>
+		</li>
+		<li>
+			<div><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+			<p>Текстовые квесты</p>
+		</li>
+		<li>
+			<div><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+			<p> Боты для мессенджеров</p>
+		</li>
+		<li>
+			<div><i class="fa fa-object-ungroup" aria-hidden="true"></i></div>
+			<p>Внутриигровые диалоги</p>
+		</li>
+		<li>
+			<div><i class="fa fa-picture-o" aria-hidden="true"></i></div>
+			<p>Презентации</p>
+		</li>
+	</ul>	
+</section>
+
+</div>	
+
+<div class="content">	
+	<h2>Демонстрация</h2>
+<div class="frame-wrapper">
+	<iframe src="https://vnjson.github.io/vpv-tpl/dist/" height="480px" width="800px"></iframe>
+</div>
+<pre>
+	<code class="yaml">
+- print: Эта история началась как обычный день.
+  audio: 
+    name: main-theme
+    action: play
+    loop: true
+    volume: 30
+    speed: 0.3
+  scene: school
+  #blur: school
+
+- Никто не мог предвидеть этих событий
+- Но произашло, то что  произошло и случилось, то что случилось
+
+- nr: Привет! Давно не виделись. 
+  center: Nora
+  point: 5
+
+
+- nr: Составишь мне компанию до прачечной?
+- menu:
+    ?: Куда бы мне отправиться?
+    Поехать домой: home
+    Сходить с Норой в праченую: chapter2.entry
+    Заглянуть в лабараторию: chapter3.lab
+
+
+	</code>
+</pre>
+
+</div>
+
+
+
+<footer>
+<a target="_blank" rel="noopener" href="https://github.com/vnjson">
+	<i class="fa fa-github-alt" aria-hidden="true"></i>
+	<span>github</span>
+</a>
+
+	
+<a target="_blank" rel="noopener" href="https://vk.com/vnjson">
+	<i class="fa fa-vk" aria-hidden="true"></i>
+	<span>vk</span>
+</a>
+<a target="_blank" rel="noopener" href="https://yaml.org/spec/1.2/spec.html" class="yaml-spec">
+	<i class="fa fa-link" aria-hidden="true"></i>	
+	<span>Yaml 1.2 spec</span>
+</a>
+
+</footer>
+<script>
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});	
+</script>
+</body>
+</html>

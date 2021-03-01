@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>vnjson</title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="../assets/favicon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script src="./js/highlight.pack.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+
+<header>
+	<a href="/" class="logo-wrapper">
+		<img class="logo" alt="Vnjson" src="../assets/logo.png">
+		<span class="big-title">Vnjson</span>
+	</a>
+	<nav class="top-bar__nav">
+			<a href="/docs">Документация</a> | 
+			<a href="/tools">Инструменты</a> |
+			<a href="/motivation">Мотивация</a> | 
+			<a href="/about">О проекте</a> 
+			<!--<a href="/news">Новости</a>-->
+	</nav>
+</header>
+
+    <h1>Мотивация</h1>
+    <p>Изначально проект задумывался как движок для визуальных новелл</p>
+<p>В 2013 году я увлёкся созданием визульных новелл на движке Ren’Py</p>
+<p>В агусте 2013 года. Перед первым микроРено у меня возникла идея<br>написать движок для создания визуальным новелл для веба.</p>
+<p>Я хотел видеть ВН и в SmartTV . и Смартфоне и встраивание в соц сети, и webVR, и на всех платформах.<br>И при этом, что бы синтаскис был минимальным, потому что коненый пользователь не должен был<br>испытывать трудностей</p>
+<p>Я думал что html/css мне будет за глаза, я даже не понимал зачем мне нужен js. Я реализовал все на #hash навигации. А диалоговое окно было блочной ссылкой. Это была своеобразная карусель div’ов. Меню было реализовано на ссылках. Картинка прикрепленная к посту это как раз реализация “движка” на якорях.</p>
+<p>Тогда я ещё не знал зачем мне нужен javascript. Так как слабо представлял что это. Я думал. что css3/html5 мне хватит.<br>Сделал простенькую разметку, фразы хранил в div’ах. И при помощи якорей выводил<br>информацию на экран.</p>
+<p>Погружаясь все глубже в этот проект, я начал изучать javascript<br>Для меня это был первый опыт полноценного изучения языка программирования.<br>И чем больше я изучал, и понимал что то. Тем самым переписывал всё заново.</p>
+<p>И в итоге от хранении пользовательского алгоритма в div’ах я постепенно<br>пришел к json.<br>Так как предпологалось, что делать визуальные новеллы на этом движке<br>будут люди далекие от программирования.<br>То json имеет много пугающих конструкций. Напирем ковычки и скобки.<br>Я же хотел, что бы это было как минимун на уровне синтаксиса Ren’Py<br>А лучше проще.</p>
+<p>Потом были реализации на базе json5. Это уже приобретало очертания.<br>Однажды в поле моей видимости попал формат yaml. И тогда в моей голове окончательно сложился пазл.<br>Минимальный синтаксис. без ковычек. Но легко расширяемый за счет плагинов.</p>
+<p>Со временем в поисках стабильности я стал выделять выполнение скрипта в отдельную<br>библиотеку. vnjson.js . Позже пришло понимание, что этот проект можно реализовать на любом языке<br>соотвественно нужно было отдаляться от frontend стека. </p>
+<p>В результате этого удаления я пришел к пониманию того что нужно<br>вычленять все это в отдельную концепцию скриптового языка.</p>
+ 
+<footer>
+<a target="_blank" rel="noopener" href="https://github.com/vnjson">
+	<i class="fa fa-github-alt" aria-hidden="true"></i>
+	<span>github</span>
+</a>
+
+	
+<a target="_blank" rel="noopener" href="https://vk.com/vnjson">
+	<i class="fa fa-vk" aria-hidden="true"></i>
+	<span>vk</span>
+</a>
+<a target="_blank" rel="noopener" href="https://yaml.org/spec/1.2/spec.html" class="yaml-spec">
+	<i class="fa fa-link" aria-hidden="true"></i>	
+	<span>Yaml 1.2 spec</span>
+</a>
+
+</footer>
+<script>
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});	
+</script>
+</body>
+</html>
