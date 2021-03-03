@@ -11,6 +11,7 @@
 <meta name="generator" content="Hexo 5.4.0"></head>
 <body>
 
+<div class="wrapper">
 <header>
 	<a href="/" class="logo-wrapper">
 		<img class="logo" alt="Vnjson" src="../assets/logo.png">
@@ -19,12 +20,15 @@
 	<nav class="top-bar__nav">
 			<a href="/docs">Документация</a> | 
 			<a href="/tools">Инструменты</a> |
-			<a href="/motivation">Мотивация</a> | 
-			<a href="/about">О проекте</a> 
-			<!--<a href="/news">Новости</a>-->
+			<!--<a href="/motivation">Мотивация</a>|-->  
+			<a href="/about">О проекте</a> | 
+			<a href="/news">Новости</a>
 	</nav>
 </header>
+<body>
 
+	<div class='content'>
+		<div class="page">
     <h1>Hello World</h1>
     <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
@@ -40,7 +44,9 @@
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
  
-<footer>
+</div>
+	</div>
+	<footer>
 <a target="_blank" rel="noopener" href="https://github.com/vnjson">
 	<i class="fa fa-github-alt" aria-hidden="true"></i>
 	<span>github</span>
@@ -57,8 +63,9 @@
 </a>
 
 </footer>
-<script>
 
+<div>
+<script>
 document.addEventListener('DOMContentLoaded', (event) => {
   document.querySelectorAll('pre code').forEach((block) => {
     hljs.highlightBlock(block);

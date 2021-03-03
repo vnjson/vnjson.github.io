@@ -2416,14 +2416,16 @@ nav a {
 nav a:hover {
   color: #82abbf; }
 
+.notfound {
+  color: red; }
+
 footer {
-  margin-top: -10vh;
+  margin-top: -8vh;
   height: 8vh;
   background: #23241f;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding: 1%;
   font-size: 1.2em;
-  width: 100%; }
+  width: 98%; }
 
 footer a {
   text-decoration: none;
@@ -2431,16 +2433,14 @@ footer a {
   text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
   margin: 10px;
   float: left;
-  border-bottom: #23241f; }
+  border-bottom: #23241f;
+  transition: color 1s; }
 
 footer a.yaml-spec {
   float: right; }
 
 footer a:hover {
-  border-bottom: 2px solid grey; }
-
-.notfound {
-  color: red; }
+  border-bottom: 2px solid gold; }
 
 /*
 
@@ -2527,16 +2527,45 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .hljs-meta {
   color: pink; }
 
+.logo-wrapper, li div {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-size: 1.3em;
+  height: 100%; }
+
+h2 {
+  margin: 0;
+  text-align: center;
+  color: #82abbf; }
+
+.wrapper {
+  width: 100%;
+  display: table;
+  height: 100%; }
+
+.content {
+  display: table-row;
+  height: 100%; }
+
 blockquote {
-  /*position: relative;*/
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-left: 8px solid #A2BCCE;
+  border-left: 10px solid #A2BCCE;
   padding-left: 3%;
   width: 70%;
   margin-left: 15%;
-  margin-top: 3vh;
   color: #8eadbd; }
 
 .features {
@@ -2572,37 +2601,18 @@ li p {
   color: #82abbf;
   font-weight: bold; }
 
-.logo-wrapper, li div {
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
 /*
-* {
-	margin: 0;
-	padding: 0;
+.frame-wrapper{
+	padding-top: 4%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+iframe{
+	border: none;
+	border-radius: 5px;
 }*/
-html,
-body,
-.wrapper {
-  height: 100%;
-  font-size: 1.1em; }
-
-.content {
-  box-sizing: border-box;
-  min-height: 73vh;
-  padding-bottom: 10vh; }
-
-h2 {
-  text-align: center;
-  color: #82abbf; }
-
-.page {
-  width: 70%;
-  margin-left: 15%; }
-
 @media (max-width: 600px) {
   .wrapper {
     height: 100%; } }
