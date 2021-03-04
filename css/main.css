@@ -2409,11 +2409,12 @@ nav {
   text-align: center;
   padding: 10px; }
 
-nav a {
+.menu-item {
   text-decoration: none;
-  color: #A2BCCE; }
+  color: #A2BCCE;
+  background: none; }
 
-nav a:hover {
+.menu-item:hover {
   color: #82abbf; }
 
 footer {
@@ -2430,14 +2431,13 @@ footer a {
   color: rgba(0, 0, 0, 0.6);
   text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
   margin: 10px;
-  float: left;
-  border-bottom: #23241f; }
+  float: left; }
 
 footer a.yaml-spec {
   float: right; }
 
 footer a:hover {
-  border-bottom: 2px solid grey; }
+  color: grey; }
 
 .notfound {
   color: red; }
@@ -2532,10 +2532,10 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-left: 8px solid #A2BCCE;
-  padding-left: 3%;
-  width: 70%;
-  margin-left: 15%;
+  border-left: 7px solid #A2BCCE;
+  padding-left: 5px;
+  width: 60%;
+  margin-left: 20%;
   margin-top: 3vh;
   color: #8eadbd; }
 
@@ -2579,11 +2579,6 @@ li p {
   align-items: center;
   justify-content: center; }
 
-/*
-* {
-	margin: 0;
-	padding: 0;
-}*/
 html,
 body,
 .wrapper {
@@ -2599,9 +2594,15 @@ h2 {
   text-align: center;
   color: #82abbf; }
 
+a {
+  color: #82abbf; }
+
+a:hover {
+  color: #C9DAE5; }
+
 .page {
-  width: 70%;
-  margin-left: 15%; }
+  width: 60%;
+  margin-left: 20%; }
 
 @media (max-width: 600px) {
   .wrapper {
