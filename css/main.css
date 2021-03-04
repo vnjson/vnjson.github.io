@@ -2604,6 +2604,10 @@ a:hover {
   width: 60%;
   margin-left: 20%; }
 
+.news-item {
+  border: 1px solid #C9DAE5;
+  margin: 10px; }
+
 @media (max-width: 600px) {
   .wrapper {
     height: 100%; } }

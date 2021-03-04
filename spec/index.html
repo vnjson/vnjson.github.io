@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>vnjson</title>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="../assets/favicon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script src="../js/highlight.pack.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+
+<div class="wrapper">
+<header>
+	<a href="/" class="logo-wrapper">
+		<img class="logo" alt="Vnjson" src="../assets/logo.png">
+		<span class="big-title">Vnjson</span>
+	</a>
+	<nav class="top-bar__nav">
+			<a class="menu-item" href="/spec">Спецификация</a> | 
+			<a class="menu-item" href="/tools">Инструменты</a> |
+			<a class="menu-item" href="/about">О проекте</a> | 
+			<a class="menu-item" href="/news">Новости</a>
+	</nav>
+</header>
+<body>
+
+	<div class='content'>
+		<div class="page">
+    <h2>Спецификация</h2>
+    <p>Сцены написанные на YAML транслируются в json<br>Для того что бы разгрузить синтаксис</p>
+<p>Каждое ключевое слово является событием</p>
+<pre>
+    <code class="yaml">
+- jump: scene.label    
+
+- menu:
+   ?: Вопрос
+   label-1: Вариант 1 
+   lab-2: Вариант 2
+
+
+    </code>
+</pre>
+
+<h2 id="Структура-сцены"><a href="#Структура-сцены" class="headerlink" title="Структура сцены"></a>Структура сцены</h2><pre>
+    <code class="planetext">
+scenes
+├───scene-1
+│   ├───assets
+│   |   ├───home2.jpg
+│   |   ├───Nora.png
+│   |   ├───school.jpg
+│   │   └───main-theme.mp3
+│   ├───start.yaml
+│   ├───home.yaml
+│   └───characters.yaml   
+├───scene-2
+│   ├───assets
+│   |   ├───Nora.png
+│   |   ├───Alice.png
+│   │   └───song1.mp3
+│   ├───chapter-1.yaml
+│   ├───chapter-2.yaml
+│   └───characters.yaml   
+    </code>
+</pre>
+
+
+<h2 id="Сцена-в-готовом-виде"><a href="#Сцена-в-готовом-виде" class="headerlink" title="Сцена в готовом виде"></a>Сцена в готовом виде</h2><pre>
+    <code class="json">
+&#123;
+  "assets": [
+    &#123;
+      "name": "home2",
+      "url": "./scenes/assets/home2.jpg"
+    &#125;,
+    &#123;
+      "name": "main-theme",
+      "url": "./scenes/assets/main-theme.mp3"
+    &#125;
+  ],
+  "characters": [
+    &#123; "name": "nr", "text": "Нора" &#125;
+  ],
+  "home": [
+    &#123;"nr": "Some reply", "audio": "main-theme"&#125;,
+    &#123;&#125;, &#123;&#125;, &#123;&#125;
+  ],
+  "start": [  ]
+&#125;        
+    </code>
+</pre>
+
+
+
+<h2 id="Объявление-персонажей"><a href="#Объявление-персонажей" class="headerlink" title="Объявление персонажей"></a>Объявление персонажей</h2><pre>
+    <code class="yaml">
+#characters.yaml
+
+- name: nr
+  text: Нора
+    </code>
+</pre>
+
+<h2 id="Как-выглядит-код-label’a"><a href="#Как-выглядит-код-label’a" class="headerlink" title="Как выглядит код label’a"></a>Как выглядит код label’a</h2><pre>
+    <code class="yaml">
+#start.yaml
+- print: События о который пойдет речь, начались задолго до твоего рождения.
+  audio: 
+    name: main-theme
+    action: play
+    loop: true
+    volume: 30
+    speed: 0.3
+  scene: school
+
+- Никто не мог предвидеть как развернётся история
+- Но произошло, то что  произошло и случилось, то что случилось
+
+- nr: Привет! Давно не виделись. 
+  center: Nora
+  point: 5
+
+- nr: Составишь мне компанию до прачечной?
+- menu:
+    ?: Куда бы мне отправиться?
+    Поехать домой: home
+    Сходить с Норой в праченую: chapter2.entry
+    Заглянуть в лабараторию: chapter3.lab
+    </code>
+</pre>
+
+ 
+</div>
+	</div>
+	<footer>
+<a target="_blank" rel="noopener" href="https://github.com/vnjson">
+	<i class="fa fa-github-alt" aria-hidden="true"></i>
+	<span>github</span>
+</a>
+	
+<a target="_blank" rel="noopener" href="https://vk.com/vnjson">
+	<i class="fa fa-vk" aria-hidden="true"></i>
+	<span>vk</span>
+</a>
+<a target="_blank" rel="noopener" href="https://yaml.org/spec/1.2/spec.html" class="yaml-spec">
+	<i class="fa fa-link" aria-hidden="true"></i>	
+	<span>Yaml 1.2</span>
+</a>
+
+</footer>
+
+<div>
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+});	
+</script>
+</body>
+</html>
