@@ -2407,7 +2407,8 @@ nav {
   font-size: 1.2em;
   color: #A2BCCE;
   text-align: center;
-  padding: 10px; }
+  padding: 10px;
+  user-select: none; }
 
 .menu-item {
   text-decoration: none;
@@ -2527,6 +2528,27 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 .hljs-meta {
   color: pink; }
 
+.news-item {
+  margin-bottom: 5vh;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+
+.news-item__bar {
+  background: #C9DAE5;
+  color: #A2BCCE;
+  width: 100%;
+  margin: 0; }
+
+.news-item__date {
+  float: right;
+  padding: 5px; }
+
+.news-item__bar h3 {
+  margin: 0;
+  padding: 5px; }
+
+.news-item__content {
+  padding: 3%; }
+
 blockquote {
   /*position: relative;*/
   display: flex;
@@ -2604,9 +2626,13 @@ a:hover {
   width: 60%;
   margin-left: 20%; }
 
-.news-item {
-  border: 1px solid #C9DAE5;
-  margin: 10px; }
+p {
+  color: #333;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-family: Segoe UI, Arial, sans-serif; }
 
 @media (max-width: 600px) {
   .wrapper {
